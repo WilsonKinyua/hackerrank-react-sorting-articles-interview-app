@@ -11,7 +11,7 @@ function App({ articles }) {
 
   useEffect(() => {
     setArticleLists(articles);
-  }, [...articles]);
+  }, []);
 
   const upVoteHandler = () => {
     let newArticles = articles.sort((a, b) => b.upvotes - a.upvotes);
